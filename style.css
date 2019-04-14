@@ -1,0 +1,155 @@
+body
+{
+margin: 0;
+padding: 0;
+background:salmon;
+overflow: hidden; 
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.container
+{
+width: 75vw;
+height: 75vh;
+background-color: white;
+border-radius: 20px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+display: flex;
+justify-content:space-around;
+align-items: center;
+flex-flow: column;
+}
+
+.heading
+{
+font-weight: bold;
+font-family: 'Open Sans', sans-serif;                
+font-size: 2em;
+margin-top:5px; 
+}
+
+.lower
+{
+font-family: 'Open Sans', sans-serif;
+font-size: 1em;
+}
+
+.main
+{
+width: 80vw;
+height: 55vh;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.photo
+{
+width: 220px;
+height:220px;
+border-radius: 50%;
+border:10px solid salmon;
+}
+
+.name
+{
+height: 100px;
+width: 300px;               
+display: flex;                
+align-items: center;
+justify-content: center;
+flex-flow: column;
+}
+            
+.names
+{
+width: 300px;
+text-align: start;
+font-size: 1.8em;
+font-family: sans-serif;
+font-weight: bold;
+border-bottom: 6px solid salmon;
+}
+
+.dept
+{
+width: 300px;
+text-align: start;
+font-size: 1em;
+font-family: sans-serif;
+margin-top: 5px; 
+}
+
+.arrow
+{
+height: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.arrow > a
+{
+text-decoration: none;
+font-weight: bold;
+font-size: 2em;
+color: salmon;
+}
+
+.arrowmob
+{
+display: none;
+}
+
+            @media (max-width:650px)
+            {
+                .arrow
+                {
+                    display: none;
+                }
+
+                .photo
+                {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                
+
+                .name,.names,.dept
+                {
+                    width: 217px;
+                    
+                }
+                .names,.dept
+                {
+                    text-align: center;
+                }
+              .arrowmob
+              {
+                  height:50px;
+                  width: 100px;
+                  background-color: white;
+                  border-radius: 20px;
+                  display:flex;
+                  justify-content: space-around; 
+                  align-items: center;
+                  position: absolute;
+                  top: 89vh;
+              }
+
+              .arrowmob > a
+            {
+             text-decoration: none;
+             font-weight: bold;
+             font-size: 1em;
+             color: salmon;
+            }
+                
+            }
