@@ -2,7 +2,7 @@ body
 {
 margin: 0;
 padding: 0;
-background:salmon;
+background:  rgb(255, 118, 118);
 overflow: hidden; 
 display: flex;
 flex-direction: column;
@@ -54,7 +54,7 @@ flex-wrap: wrap;
 width: 220px;
 height:220px;
 border-radius: 50%;
-border:10px solid salmon;
+border:10px solid  rgb(255, 118, 118);
 }
 
 .name
@@ -74,7 +74,7 @@ text-align: start;
 font-size: 1.8em;
 font-family: sans-serif;
 font-weight: bold;
-border-bottom: 6px solid salmon;
+border-bottom: 6px solid  rgb(255, 118, 118);
 }
 
 .dept
@@ -99,7 +99,7 @@ align-items: center;
 text-decoration: none;
 font-weight: bold;
 font-size: 2em;
-color: salmon;
+color:  rgb(255, 118, 118);
 }
 
 .arrowmob
@@ -149,7 +149,7 @@ display: none;
              text-decoration: none;
              font-weight: bold;
              font-size: 1em;
-             color: salmon;
+             color:  rgb(255, 118, 118);
             }
                 
             }
