@@ -23,8 +23,6 @@ function doPrev() {
 }
 function changeDetails() {
   photoDiv.style.animation = "animate 1s ease 1";
-  arrow[0].style.visibility = "hidden";
-  arrow[1].style.visibility = "hidden";
   arrow[0].onclick = null;
   arrow[1].onclick = null;
   setTimeout(function() {
@@ -34,8 +32,6 @@ function changeDetails() {
   }, 500);
   setTimeout(function() {
   photoDiv.style.animation = "none";
-  arrow[0].style.visibility = "visible";
-  arrow[1].style.visibility = "visible";
   arrow[0].onclick = doPrev;
   arrow[1].onclick = doNext;
   }, 1000);
