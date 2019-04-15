@@ -103,6 +103,7 @@ body {
     width: 25px;
     background-size: 100% 100%;
     background-image: url('assests/desktop/arrow1.png');
+    cursor: pointer;
 }
 
 .arrow:nth-of-type(1) {
