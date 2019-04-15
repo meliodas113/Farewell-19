@@ -75,7 +75,7 @@ function handleTouchMove(evt) {
         if ( xDiff > 0 ) {
             doNext();
         } else {
-            doPrev
+            doPrev();
         }                       
     }    /* reset values */
     xDown = null;
