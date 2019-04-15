@@ -59,8 +59,8 @@ body {
 }
 
 .photo {
-    width: 350px;
-    height:350px;
+    width: 300px;
+    height:300px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -79,11 +79,11 @@ body {
     align-items: flex-start;
     justify-content: center;
     flex-flow: column;
-    margin-left: 75px;
+    margin-left: 15px;
 }
 
 .names {
-    width: 500px;
+    width: 450px;
     font-size: 3em;
     font-family: sans-serif;
     font-weight: bold;

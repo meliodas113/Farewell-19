@@ -25,7 +25,7 @@ function changeDetails() {
     nameContainer.innerHTML = name[objectIndex-1];
     deptContainer.innerHTML = department[objectIndex-1];
     imageContainer.src = "assests/" + objectIndex + ".png";
-}
+  }
 
 
 // -----------------------------keyboard navigation-------------------------------------
