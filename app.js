@@ -3,6 +3,7 @@ let numOfObjects = 2;
 let imageContainer = document.querySelector(".image-container");
 let nameContainer = document.querySelector(".names");
 let deptContainer = document.querySelector(".dept");
+let arrow = document.querySelectorAll(".arrow");
 let name = ["Megh Thakkar", "Amritanshu Jain"];
 let department = ["Backend", "x-Backend"];
 var photoDiv = document.querySelectorAll(".photo")[0];
@@ -21,14 +22,19 @@ function doPrev() {
   changeDetails();
 }
 function changeDetails() {
-  photoDiv.style.animation = "animate 1s ease 1";
+  photoDiv.style.animation = "exit 0.5s ease 1";
+  arrow[0].onclick = null;
+  arrow[1].onclick = null;
   setTimeout(function() {
   nameContainer.innerHTML = name[objectIndex-1];
   deptContainer.innerHTML = department[objectIndex-1];
-  imageContainer.src = "assests/images/" + objectIndex + ".png";  
+  imageContainer.src = "assests/images/" + objectIndex + ".png"; 
+  photoDiv.style.animation = "enter 0.5s ease 1";
   }, 500);
   setTimeout(function() {
   photoDiv.style.animation = "none";
+  arrow[0].onclick = doPrev;
+  arrow[1].onclick = doNext;
   }, 1000);
 }
 
@@ -74,8 +80,20 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
             doNext();
+            document.removeEventListener('touchstart', handleTouchStart, false);        
+            document.removeEventListener('touchmove', handleTouchMove, false);
+            setTimeout(function(){
+              document.addEventListener('touchstart', handleTouchStart, false);        
+              document.addEventListener('touchmove', handleTouchMove, false);
+            },900);
         } else {
             doPrev();
+            document.removeEventListener('touchstart', handleTouchStart, false);        
+            document.removeEventListener('touchmove', handleTouchMove, false);
+            setTimeout(function(){
+              document.addEventListener('touchstart', handleTouchStart, false);        
+              document.addEventListener('touchmove', handleTouchMove, false);
+            },900);
         }                       
     }    /* reset values */
     xDown = null;
