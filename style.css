@@ -26,7 +26,7 @@ body {
     background-size: 100% 100%;
     border-radius: 20px;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-between;
     align-items: center;
     flex-flow: column;
 }
@@ -35,18 +35,17 @@ body {
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
     font-size: 4em;
-    margin-top:5px; 
+    margin-top: 20px;
 }
 
 .lower {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .main {
     width: 100%;
-    height: 55vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,32 +114,76 @@ body {
 
 /* -----------------------------------mobile view------------------------------ */
 @media (max-width: 650px) {
-    .arrow {
-        display: none;
+    .dummy-background {
+        height: 80vh;
+        width: 80vw;
+        border-radius: 15px;
+    }
+
+    .container {
+        height: 80vh;
+        width: 80vw;
+        border-radius: 15px;
+        background-image: url('assests/mobile/container_background.png');
+    }
+
+    .heading {
+        font-size: 2em;
+        margin-top: 20px;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .lower {
+        font-size: 1em;
+        margin-bottom: 30px;
+        padding-top: 50px;
+    }
+
+    .details {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     .photo {
-        width: 150px;
-        height: 150px;
+        width: 175px;
+        height: 175px;
+        border-width: 5px;
     }
 
-    .name,.names,.dept {
-        width: 217px;
+    .names {
+        width: 225px;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;  
+        border-width: 3px;
+        font-weight: 600;
     }
 
-    .names,.dept {
-        text-align: center;
+    .dept {
+        font-size: 1.25em;
+    }
+
+    .name {
+        margin-left: 0;
+        margin-top: 50px;
+        align-items: center;
     }
 
     .arrow {
-        height:50px;
-        width: 100px;
-        background-color: white;
-        border-radius: 20px;
-        display:flex;
-        justify-content: space-around; 
-        align-items: center;
+        height: 30px;
+        width: 20px;
         position: absolute;
-        top: 89vh;
+        top: 50%;
+        right: 0;
+        margin: 0 7.5px;
+        background-image: url('assests/mobile/arrow11.png');
+    }
+    .arrow:nth-of-type(1) {
+        left: 0;
+        background-image: url('assests/mobile/arrow12.png');
     }
 }
