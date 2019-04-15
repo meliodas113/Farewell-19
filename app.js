@@ -5,6 +5,7 @@ let nameContainer = document.querySelector(".names");
 let deptContainer = document.querySelector(".dept");
 let name = ["Megh Thakkar", "Amritanshu Jain"];
 let department = ["Backend", "x-Backend"];
+var photoDiv = document.querySelectorAll(".photo")[0];
 function doNext() {
     if(objectIndex != numOfObjects)
     objectIndex++;
