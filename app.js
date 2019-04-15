@@ -7,32 +7,37 @@ let name = ["Megh Thakkar", "Amritanshu Jain"];
 let department = ["Backend", "x-Backend"];
 var photoDiv = document.querySelectorAll(".photo")[0];
 function doNext() {
-    if(objectIndex != numOfObjects)
+  if(objectIndex != numOfObjects)
     objectIndex++;
-    else
+  else
     objectIndex = 1;
-    changeDetails();
+  changeDetails();
 }
 function doPrev() {
-
-    if(objectIndex != 1)
+  if(objectIndex != 1)
     objectIndex--;
-    else
+  else
     objectIndex = numOfObjects;
-    changeDetails();
+  changeDetails();
 }
 function changeDetails() {
-    nameContainer.innerHTML = name[objectIndex-1];
-    deptContainer.innerHTML = department[objectIndex-1];
-    imageContainer.src = "assests/" + objectIndex + ".png";
+  photoDiv.style.animation = "animate 1s ease 1";
+  setTimeout(function() {
+  nameContainer.innerHTML = name[objectIndex-1];
+  deptContainer.innerHTML = department[objectIndex-1];
+  imageContainer.src = "assests/images/" + objectIndex + ".png";  
+  }, 500);
+  setTimeout(function() {
+  photoDiv.style.animation = "none";
+  }, 1000);
 }
 
 
 // -----------------------------keyboard navigation-------------------------------------
 window.addEventListener("keypress", function(e){
-    if(e.keyCode == 39 || e.keyCode == 38)
+  if(e.keyCode == 39 || e.keyCode == 38)
     doNext();
-    if(e.keyCode == 37 || e.keyCode == 40)
+  if(e.keyCode == 37 || e.keyCode == 40)
     doPrev();
 });
 
