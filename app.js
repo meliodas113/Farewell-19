@@ -3,6 +3,7 @@ let numOfObjects = 2;
 let imageContainer = document.querySelector(".image-container");
 let nameContainer = document.querySelector(".names");
 let deptContainer = document.querySelector(".dept");
+let arrow = document.querySelectorAll(".arrow");
 let name = ["Megh Thakkar", "Amritanshu Jain"];
 let department = ["Backend", "x-Backend"];
 var photoDiv = document.querySelectorAll(".photo")[0];
@@ -22,13 +23,21 @@ function doPrev() {
 }
 function changeDetails() {
   photoDiv.style.animation = "animate 1s ease 1";
+  arrow[0].style.visibility = "hidden";
+  arrow[1].style.visibility = "hidden";
+  arrow[0].onclick = null;
+  arrow[1].onclick = null;
   setTimeout(function() {
   nameContainer.innerHTML = name[objectIndex-1];
   deptContainer.innerHTML = department[objectIndex-1];
-  imageContainer.src = "assests/images/" + objectIndex + ".png";  
+  imageContainer.src = "assests/images/" + objectIndex + ".png"; 
   }, 500);
   setTimeout(function() {
   photoDiv.style.animation = "none";
+  arrow[0].style.visibility = "visible";
+  arrow[1].style.visibility = "visible";
+  arrow[0].onclick = doPrev;
+  arrow[1].onclick = doNext;
   }, 1000);
 }
 
