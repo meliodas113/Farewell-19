@@ -43,33 +43,41 @@ window.addEventListener("keypress", function(e){
 
 
 // ------------------------------------Swipe---------------------------------------------
-var initialX = null;
-var initialY = null;
- 
-function startTouch(e) {
-  initialX = e.touches[0].clientX;
-  initialY = e.touches[0].clientY;
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;                                                        
+var yDown = null;
+
+function getTouches(evt) {
+  return evt.touches ||             // browser API
+         evt.originalEvent.touches; // jQuery
+}                                                     
+
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            doNext();
+        } else {
+            doPrev
+        }                       
+    }    /* reset values */
+    xDown = null;
+    yDown = null;                                             
 };
- 
-function moveTouch(e) {
-  if (initialX === null) {
-    return;
-  }
-  var currentX = e.touches[0].clientX;
-  var currentY = e.touches[0].clientY;
-  var diffX = initialX - currentX;
-  var diffY = initialY - currentY;
-  if (Math.abs(diffX) > Math.abs(diffY)) {
-    // sliding horizontally
-    if (diffX > 0) {
-      // swiped left
-      doNext();
-    } else {
-      // swiped right
-      doPrev();
-    }  
-  } 
-  initialX = null;
-  initialY = null;
-  e.preventDefault();
-}
