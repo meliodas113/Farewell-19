@@ -80,8 +80,20 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
             doNext();
+            document.removeEventListener('touchstart', handleTouchStart, false);        
+            document.removeEventListener('touchmove', handleTouchMove, false);
+            setTimeout(function(){
+              document.addEventListener('touchstart', handleTouchStart, false);        
+              document.addEventListener('touchmove', handleTouchMove, false);
+            },900);
         } else {
             doPrev();
+            document.removeEventListener('touchstart', handleTouchStart, false);        
+            document.removeEventListener('touchmove', handleTouchMove, false);
+            setTimeout(function(){
+              document.addEventListener('touchstart', handleTouchStart, false);        
+              document.addEventListener('touchmove', handleTouchMove, false);
+            },900);
         }                       
     }    /* reset values */
     xDown = null;
