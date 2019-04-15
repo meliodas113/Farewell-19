@@ -135,17 +135,60 @@ body {
 
 @keyframes animate{
     0%{
-        transform : scale(1);
-        opacity: 1;
+        opacity:1;
+       transform: scale(1);
+       }
+       25%{
+        transform: scale(0.8);
+        opacity:1;
+       }
+       75%
+       {
+         transform: scale(1.1);
+       }
+       100%
+       {
+        transform: scale(1.1);
+       }
+}
+@-webkit-keyframes  exit {
+    0%{
+     opacity:1;
+    transform: scale(1);
     }
     50%{
-        transform: scale(0.5);
-        opacity: 0;
+     transform: scale(0.8);
+     opacity:1;
     }
-    100%{
-        transform: scale(1);
-        opacity: 1;
+    99%
+    {
+      transform: scale(1);
     }
+    100%
+    {
+      opacity:0;
+    }
+    
+}
+@-webkit-keyframes enter {
+    0%{
+      opacity:1;
+      transform: scale(1.1);
+    }
+    50%{
+    
+    }
+    99%
+    {
+     
+    }
+    100%
+    {
+      transform: scale(1);
+      opacity:1;
+
+    }
+    
 }
 
 /* -----------------------------------mobile view------------------------------ */

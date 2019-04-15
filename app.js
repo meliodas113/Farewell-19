@@ -22,13 +22,14 @@ function doPrev() {
   changeDetails();
 }
 function changeDetails() {
-  photoDiv.style.animation = "animate 1s ease 1";
+  photoDiv.style.animation = "exit 0.5s ease 1";
   arrow[0].onclick = null;
   arrow[1].onclick = null;
   setTimeout(function() {
   nameContainer.innerHTML = name[objectIndex-1];
   deptContainer.innerHTML = department[objectIndex-1];
   imageContainer.src = "assests/images/" + objectIndex + ".png"; 
+  photoDiv.style.animation = "enter 0.5s ease 1";
   }, 500);
   setTimeout(function() {
   photoDiv.style.animation = "none";
