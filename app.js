@@ -1,33 +1,11 @@
-var images = [];
-function preload() {
-    for (var i = 0; i < arguments.length; i++) {
-        images[i] = new Image();
-        images[i].src = preload.arguments[i];
-    }
-}
-
-//-- usage --//
-preload(
-  "assets/images/1.jpg",
-  "assets/images/2.jpg",
-  "assets/images/3.jpg",
-  "assets/images/4.jpg",
-  "assets/images/5.jpg",
-  "assets/images/6.jpg",
-  "assets/images/7.jpg",
-  "assets/images/8.jpg",
-  "assets/images/9.jpg"
-)
-
-
 let objectIndex = 1;
-let numOfObjects = 9;
+let numOfObjects = 10;
 let imageContainer = document.querySelector(".image-container");
 let nameContainer = document.querySelector(".names");
 let deptContainer = document.querySelector(".dept");
 let arrow = document.querySelectorAll(".arrow");
-let name = ["Aashish Aggarwal", "Anup Bhutada", "Bhavesh Narra", "Hitesh Raghuvanshi", "Paras Gupta", "Pragati Asudani", "Pulkit Agarwal", "Suvigya Vijay", "Vikrant Singh"];
-let department = ["Design", "Design", "Frontend", "Video", "Design", "Frontend", "Design", "Frontend", "App Development"];
+let name = ["Suvigya Vijay", "Hitesh Raghuvanshi", "Pragati Asudani", "Vikrant Singh", "Pulkit Agarwal", "Kush Kanwar", "Aashish Aggarwal", "Anup Bhutada", "Bhavesh Narra", "Paras Gupta"];
+let department = ["Frontend", "Video", "Frontend", "App Development", "Design", "Video", "Design", "Design", "Frontend", "Design"];
 var photoDiv = document.querySelectorAll(".photo")[0];
 
 document.onload = changeDetails();
