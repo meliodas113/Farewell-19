@@ -1,12 +1,15 @@
 let objectIndex = 1;
-let numOfObjects = 2;
+let numOfObjects = 9;
 let imageContainer = document.querySelector(".image-container");
 let nameContainer = document.querySelector(".names");
 let deptContainer = document.querySelector(".dept");
 let arrow = document.querySelectorAll(".arrow");
-let name = ["Megh Thakkar", "Amritanshu Jain"];
-let department = ["Backend", "x-Backend"];
+let name = ["Aashish Aggarwal", "Anup Bhutada", "Bhavesh Narra", "Hitesh Raghuvanshi", "Paras Gupta", "Pragati Asudani", "Pulkit Agarwal", "Suvigya Vijay", "Vikrant Singh"];
+let department = ["Design", "", "Frontend", "Video", "Design", "Frontend", "Design", "Frontend", "App Development"];
 var photoDiv = document.querySelectorAll(".photo")[0];
+
+document.onload = changeDetails();
+
 function doNext() {
   if(objectIndex != numOfObjects)
     objectIndex++;
@@ -14,6 +17,7 @@ function doNext() {
     objectIndex = 1;
   changeDetails();
 }
+
 function doPrev() {
   if(objectIndex != 1)
     objectIndex--;
@@ -21,6 +25,7 @@ function doPrev() {
     objectIndex = numOfObjects;
   changeDetails();
 }
+
 function changeDetails() {
   photoDiv.style.animation = "exit 0.5s ease 1";
   arrow[0].onclick = null;
@@ -28,7 +33,7 @@ function changeDetails() {
   setTimeout(function() {
   nameContainer.innerHTML = name[objectIndex-1];
   deptContainer.innerHTML = department[objectIndex-1];
-  imageContainer.src = "assests/images/" + objectIndex + ".png"; 
+  imageContainer.src = "assests/images/" + objectIndex + ".jpg"; 
   photoDiv.style.animation = "enter 0.5s ease 1";
   }, 500);
   setTimeout(function() {
