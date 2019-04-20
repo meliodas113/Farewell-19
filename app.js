@@ -1,11 +1,11 @@
 let objectIndex = 1;
-let numOfObjects = 10;
+let numOfObjects = 11;
 let imageContainer = document.querySelector(".image-container");
 let nameContainer = document.querySelector(".names");
 let deptContainer = document.querySelector(".dept");
 let arrow = document.querySelectorAll(".arrow");
-let name = ["Suvigya Vijay", "Hitesh Raghuvanshi", "Pragati Asudani", "Vikrant Singh", "Pulkit Agarwal", "Kush Kanwar", "Aashish Aggarwal", "Anup Bhutada", "Bhavesh Narra", "Paras Gupta"];
-let department = ["Frontend", "Video", "Frontend", "App Development", "Design", "Video", "Design", "Design", "Frontend", "Design"];
+let name = ["Suvigya Vijay", "Hitesh Raghuvanshi", "Pragati Asudani", "Vikrant Singh", "Pulkit Agarwal", "Kush Kanwar", "Harshil Chaudhary", "Anup Bhutada", "Bhavesh Narra", "Paras Gupta", "Ashish Gupta"];
+let department = ["Frontend", "Video", "Frontend", "App Development", "Design", "Video", "Design", "Design", "Frontend", "Design", "Design"];
 var photoDiv = document.querySelectorAll(".photo")[0];
 
 document.onload = changeDetails();
