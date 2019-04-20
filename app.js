@@ -25,7 +25,7 @@ let nameContainer = document.querySelector(".names");
 let deptContainer = document.querySelector(".dept");
 let arrow = document.querySelectorAll(".arrow");
 let name = ["Aashish Aggarwal", "Anup Bhutada", "Bhavesh Narra", "Hitesh Raghuvanshi", "Paras Gupta", "Pragati Asudani", "Pulkit Agarwal", "Suvigya Vijay", "Vikrant Singh"];
-let department = ["Design", "", "Frontend", "Video", "Design", "Frontend", "Design", "Frontend", "App Development"];
+let department = ["Design", "Design", "Frontend", "Video", "Design", "Frontend", "Design", "Frontend", "App Development"];
 var photoDiv = document.querySelectorAll(".photo")[0];
 
 document.onload = changeDetails();
