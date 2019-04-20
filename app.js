@@ -1,3 +1,25 @@
+var images = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+//-- usage --//
+preload(
+  "assets/images/1.jpg",
+  "assets/images/2.jpg",
+  "assets/images/3.jpg",
+  "assets/images/4.jpg",
+  "assets/images/5.jpg",
+  "assets/images/6.jpg",
+  "assets/images/7.jpg",
+  "assets/images/8.jpg",
+  "assets/images/9.jpg"
+)
+
+
 let objectIndex = 1;
 let numOfObjects = 9;
 let imageContainer = document.querySelector(".image-container");
