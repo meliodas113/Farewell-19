@@ -1,3 +1,23 @@
+// --------------------------pre-loading of images-------------------------------------
+let I=image1= new Image(150,20);
+image1.src = "1.jpg";
+let I=image2= new Image(150,20);
+image2.src = "2.jpg";
+let I=image3= new Image(150,20);
+image3.src = "3.jpg";
+let I=image4= new Image(150,20);
+image4.src = "4.jpg";
+let I=image5= new Image(150,20);
+image5.src = "5.jpg";
+let I=image6= new Image(150,20);
+image6.src = "6.jpg";
+let I=image7= new Image(150,20);
+image7.src = "7.jpg";
+let I=image8= new Image(150,20);
+image8.src = "8.jpg";
+let I=image9= new Image(150,20);
+image9.src = "9.jpg";
+
 let objectIndex = 1;
 let numOfObjects = 9;
 let imageContainer = document.querySelector(".image-container");
