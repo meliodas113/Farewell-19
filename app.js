@@ -53,6 +53,7 @@ function changeDetails() {
   arrow[0].onclick = null;
   arrow[1].onclick = null;
   setTimeout(function() {
+  imageContainer.src = ""; 
   nameContainer.innerHTML = name[objectIndex-1];
   deptContainer.innerHTML = department[objectIndex-1];
   imageContainer.src = "assests/images/" + objectIndex + ".jpg"; 
